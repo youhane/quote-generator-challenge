@@ -4,6 +4,6 @@ import { Wrapper } from './GetQuoteButton.styles'
 
 export default function GetQuoteButton() {
   return <Wrapper>
-    random <FiRefreshCw/>
+    random <i><FiRefreshCw/></i>
   </Wrapper>
 }

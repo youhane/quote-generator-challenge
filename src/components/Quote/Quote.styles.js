@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
     }
 
     h1{
-        font-size: 200%;
         font-weight: 500;
         width: 40%;
     }

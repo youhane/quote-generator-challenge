@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    transition: .2s all;
 
     *{
         margin: 0;
@@ -19,5 +20,22 @@ export const Wrapper = styled.div`
 
     p{
         color: #828282;
+    }
+
+    i{
+        color: white;
+    }
+
+    :hover{
+        background: #333333;
+        cursor: pointer;
+    }
+
+    .white{
+        color: #f2f2f2;
+    }
+
+    .black{
+        color: #4f4f4f;
     }
 `
