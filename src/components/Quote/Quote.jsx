@@ -1,11 +1,11 @@
 import React from 'react'
 import { Wrapper } from './Quote.styles'
 
-export default function Quote() {
+export default function Quote({quote}) {
   return (
     <Wrapper>
       <div></div>
-      <h1>"This is the quote aaa a sda da d asd asd asd asd as das adasdasdasda das dasdasdasda asdadasdadasdas dasd"</h1>
+      <h1>{quote}</h1>
     </Wrapper>
   )
 }

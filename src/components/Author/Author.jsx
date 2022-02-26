@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Wrapper } from './Author.styles'
 import {FaLongArrowAltRight} from 'react-icons/fa'
 
-export default function Author() {
+export default function Author({author, date}) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -12,9 +12,9 @@ export default function Author() {
     >
       <div>
         <h2 className={hovered ? 'white' : 'black'} >
-          Author Name
+          {author}
         </h2>
-        <p>Genre</p>
+        <p>{date}</p>
       </div>
       <i><FaLongArrowAltRight/></i>
     </Wrapper>

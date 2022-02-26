@@ -9,4 +9,9 @@ export const Wrapper = styled.button`
     position: absolute;
     top: 3%;
     right: 3%;
+    transition: .2s all;
+    
+    :hover{
+        color: grey;
+    }
 `
