@@ -34,7 +34,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/youhane/wind_bnb/blob/main/images/chrome_hlpxLICKHD.jpg)
+![screenshot](https://github.com/youhane/quote-generator-challenge/blob/main/images/chrome_TkJY67RsmR.png)
 
 ### Built With
 
