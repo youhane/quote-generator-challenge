@@ -11,8 +11,10 @@ function App() {
   const [quotes, setQuotes] = useState({
     content: '',
     author: '',
-    date: '',
+    tags: '',
   });
+  const [multipleQuotes, setMultipleQuotes] = useState();
+  const [showMultipleQuotes, setShowMultipleQuotes] = useState(false);
 
   // GET RANDOM QUOTE
   const getRandomQuote = () => {
@@ -21,15 +23,31 @@ function App() {
     .then(data => setQuotes(data))
   }
 
+  // GET MANY QUOTES
+  const getManyQuotes = () => {
+    fetch(API + '/quotes')
+    .then(res => res.json())
+    .then(data => setMultipleQuotes(data.results))
+  }
+
   useEffect(() => {
     getRandomQuote()
+    getManyQuotes()
   }, []);
 
   return (
-    <>
+    < >
       <GetQuoteButton getRandomQuote={getRandomQuote}/>
-      <SingleQuote quote={quotes.content} author={quotes.author} date={quotes.dateAdded}/>
-      {/* <MultipleQuotes/> */}
+      {showMultipleQuotes ? 
+        (<MultipleQuotes multipleQuotes={multipleQuotes}/>) : 
+        (<SingleQuote 
+          quote={quotes.content} 
+          author={quotes.author} 
+          tag={quotes.tags[0]} 
+          setShowMultipleQuotes={setShowMultipleQuotes}
+          />
+        )
+      }
       <Footer/>
       <GlobalStyles/>
     </>

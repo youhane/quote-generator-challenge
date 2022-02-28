@@ -1,15 +1,12 @@
 import React from 'react'
-import Quote from '../../components/Quote/Quote'
-import { Wrapper } from './MultipleQuotes.styles'
+import SingleQuote from '../SingleQuote/SingleQuote'
 
-export default function MultipleQuotes() {
+export default function MultipleQuotes({multipleQuotes}) {
   return (
-    <Wrapper>
-      <h2>Author Name</h2>
-      <Quote/>
-      <Quote/>
-      <Quote/>
-      <Quote/>
-    </Wrapper>
+    <>
+      {multipleQuotes?.map((quote, index) => {
+        return <SingleQuote key={index} quote={quote.content} author={quote.author} tag={quote.tags[0]}/>
+      })}
+    </>
   )
 }
