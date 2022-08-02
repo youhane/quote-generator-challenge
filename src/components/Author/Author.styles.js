@@ -38,4 +38,9 @@ export const Wrapper = styled.div`
     .black{
         color: #4f4f4f;
     }
+
+    
+    @media (max-width: 320px){
+        width: 70%;
+    }
 `

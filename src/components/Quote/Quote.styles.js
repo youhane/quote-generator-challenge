@@ -17,4 +17,13 @@ export const Wrapper = styled.div`
         font-weight: 500;
         width: 40%;
     }
+
+    @media (max-width: 320px){
+        font-size: .75rem;
+        margin-top: 5rem;
+
+        h1{
+            width: 70%;
+        }
+    }
 `
